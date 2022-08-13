@@ -1,0 +1,21 @@
+3
+Bevezetés a számításelméletbe 2;IB028;Előadás;10;15;12;0
+Analízis 2;IB028;Előadás;12;15;14;0
+A programozás alapjai 2;IB028;15;15;17;0
+1
+Bevezetés a számításelméletbe 2;IB138;Gyakorlat;10;15;12;0
+4
+Számítógép-architektúrák;IB028;Előadás;8;15;10;0
+Rendszermodellezés;IB028;Előadás;10;15;12;0
+Analízis 2;IB028;Előadás;12;15;14;0
+Fizika 2i;F29;Előadás;15;15;17;0
+5
+Tanköri foglalkozás 2;E403;-;10;15;12;0
+Rendszermodellezés;IB139;Gyakorlat;12;15;14;0
+Számítógép-architektúrák;E406;Gyakorlat;12;15;14;0
+Analízis 2;E406;Gyakorlat;15;15;17;0
+Ergonómia;E1B;Előadás;17;15;19
+3
+Fizika 2i;E407;Gyakorlat;8;15;10;0
+Testnevelés;ST-Foci;Sport;10;30;11;30
+A programozás alapjai 2;R;Labor;12;15;14;0
