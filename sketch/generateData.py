@@ -2,7 +2,7 @@ import os
 
 clear = lambda: os.system('cls')
 
-file = open("data.txt", "w+")
+file = open("data/data.txt", "w+")
 
 napok = ["Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek"]
 
