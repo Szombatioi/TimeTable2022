@@ -1,7 +1,6 @@
 /**TODO
  * 
  * 
- * 
  */
 
 import java.util.Calendar;
@@ -12,9 +11,12 @@ Lesson[][] lessons;
 int LessonIndex;
 
 Time currentTime;
-
+HET mostHet;
 
 void setup() {
+  //!!!Test
+  mostHet = HET.MINDEN;
+  
   frameRate(1);
   //frameRate(2);
   fullScreen();
@@ -62,10 +64,11 @@ void openFile() {
         Integer.parseInt(data[3]),
         Integer.parseInt(data[4]),
         Integer.parseInt(data[5]),
-        Integer.parseInt(data[6])
+        Integer.parseInt(data[6]),
+        Integer.parseInt(data[7])
       };
       
-      lessons[day][lessonIndex++] = new Lesson(data[0], data[1], data[2], new Time(x[0], x[1]), new Time(x[2], x[3]));
+      lessons[day][lessonIndex++] = new Lesson(data[0], data[1], data[2], new Time(x[0], x[1]), new Time(x[2], x[3]), x[4]);
     }
     day++;
   }
@@ -92,7 +95,10 @@ void EventListeners(){
   currentTime = new Time(hour(), minute());
   
   //lessonEnd - mp-ként
-  if(LessonIndex < lessons[today].length && currentTime.equals(lessons[today][LessonIndex].end)) LessonIndex++;
+  if(LessonIndex < lessons[today].length){
+    if(currentTime.equals(lessons[today][LessonIndex].end)) LessonIndex++;
+    if(lessons[today][LessonIndex].mikor == HET.MINDEN || lessons[today][LessonIndex].mikor == mostHet) LessonIndex++;
+  }
     
   //day - naponta
   if(currentTime.toString() == "00:00") getDay();

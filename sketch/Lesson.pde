@@ -1,13 +1,20 @@
+enum HET{
+  MINDEN, PS, PTL
+};
+
 class Lesson{
   String name, type, place;
   Time start, end;
+  HET mikor;
   
-  public Lesson(String n, String t, String p, Time s, Time e){
+  public Lesson(String n, String t, String p, Time s, Time e, int mikor){
     name = n;
     type = t;
     place = p;
     start = s;
     end = e;
+    if(mikor == 0) this.mikor = HET.MINDEN;
+    else this.mikor = mikor == 1 ? HET.PTL : HET.PS;
   }
   public void draw(int size){
     textSize(0.5*size);
