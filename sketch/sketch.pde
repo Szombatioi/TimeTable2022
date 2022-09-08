@@ -1,5 +1,5 @@
 /**TODO
- * 
+ *  
  * 
  */
 
@@ -75,7 +75,11 @@ void openFile() {
 }
 
 void getDay(){
-  today = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
+  Calendar date = Calendar.getInstance();
+  
+  mostHet = date.get(Calendar.WEEK_OF_YEAR) % 2 == 0 ? HET.PS : HET.PTL;
+  
+  today = date.get(Calendar.DAY_OF_WEEK);
   if (today == 0) today = 6; //Sunday
   else today-=2; //Every other day
   
